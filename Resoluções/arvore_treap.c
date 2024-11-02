@@ -9,12 +9,12 @@
 
 // Estrutura de um nó na árvore treap
 typedef struct No {
-    int chave;          // A chave do nó
-    int prioridade;     // Prioridade do nó
-    struct No *esq, *dir; // Ponteiros para os nós à esquerda e à direita
+    int chave;          
+    int prioridade;     
+    struct No *esq, *dir; 
 } No;
 
-// Função para criar um novo nó
+
 No* novoNo(int chave) {
     No* no = (No*)malloc(sizeof(No));
     no->chave = chave;
@@ -23,7 +23,7 @@ No* novoNo(int chave) {
     return no;
 }
 
-// Função para girar o nó para a direita (ajuda a organizar a árvore)
+
 No* rotacaoDireita(No* y) {
     No* x = y->esq;
     y->esq = x->dir;
@@ -31,7 +31,7 @@ No* rotacaoDireita(No* y) {
     return x;
 }
 
-// Função para girar o nó para a esquerda
+
 No* rotacaoEsquerda(No* x) {
     No* y = x->dir;
     x->dir = y->esq;
@@ -39,7 +39,7 @@ No* rotacaoEsquerda(No* x) {
     return y;
 }
 
-// Inserir um novo valor na árvore
+
 No* inserir(No* raiz, int chave) {
     if (raiz == NULL) return novoNo(chave);
 
@@ -55,7 +55,7 @@ No* inserir(No* raiz, int chave) {
     return raiz;
 }
 
-// Buscar um valor na árvore
+
 No* buscar(No* raiz, int chave) {
     if (raiz == NULL || raiz->chave == chave)
         return raiz;
@@ -64,7 +64,7 @@ No* buscar(No* raiz, int chave) {
     return buscar(raiz->dir, chave);
 }
 
-// Excluir um valor da árvore
+
 No* excluir(No* raiz, int chave) {
     if (raiz == NULL) return raiz;
 
@@ -103,7 +103,7 @@ void exibir(No* raiz) {
 
 // Menu principal
 int main() {
-    srand(time(0)); // Inicializa o gerador de números aleatórios
+    srand(time(0)); 
     No* raiz = NULL;
     int opcao, chave;
 
