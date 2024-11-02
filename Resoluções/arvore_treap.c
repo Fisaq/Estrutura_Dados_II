@@ -1,7 +1,7 @@
-//Aluno: Isaque Ferreira de Paula Reis
-//Turma: CC6N
+// Aluno: Isaque Ferreira de Paula Reis
+// Turma: CC6N
 
-//Árvore Treap
+// Árvore Treap
 
 #include <stdio.h>
 #include <stdlib.h>
