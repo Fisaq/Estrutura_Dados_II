@@ -1,5 +1,5 @@
-
-
+// Aluno: Isaque Ferreira de Paula Reis
+// Turma: CC6N
 
 #include <stdio.h>
 #include <stdlib.h>
